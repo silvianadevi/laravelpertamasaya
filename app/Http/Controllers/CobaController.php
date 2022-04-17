@@ -8,29 +8,33 @@ use App\Models\Friends;
 
 class CobaController extends Controller
 {
+   
     public function index ()
     {
-        return 'test berhasil';
+        $friends = Friends::paginate(3);
+
+        return view('index', compact('friends'));
     }
-    public function urutan ($ke)
+
+    public function create ()
     {
-        $friends = Friends :: paginate(3);
-
-        return view('friend', compact('friends'));
-
-       
+        return view('create');
     }
-    public function coba ($ke)
+    public function store (Request $request)
     {
-        return view ('coba', ['ke' => $ke]) ;
+        // Validate the request...
+
+        $friends = new Friends;
+
+        $friends->nama = $request->nama;
+        $friends->no_telp = $request->notelp;
+        $friends->alamat = $request->alamat;
+
+        $friends->save();
+
+        
     }
 
-    public function friends ()
-    {
-        $friends = Friends ::paginate(3);
-
-        return view('friend', compact('friends'));
-    }
 
 }
 

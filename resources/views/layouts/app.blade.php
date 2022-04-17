@@ -13,7 +13,7 @@
   </head>
   <body>
       <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
   <a class="navbar-brand" href="#">Laravel Pertama</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,6 +26,7 @@
     </div>
   </div>
 </nav>
+    <a href="/friends/create" class="card-link btn-primary">Tambah teman</a>
 
     @yield('content')
 

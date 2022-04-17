@@ -12,14 +12,16 @@
     <h5 class="card-title"> {{ $friend['nama'] }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{ $friend['no_telp'] }}</h6>
     <p class="card-text"> {{ $friend['alamat'] }}.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="#" class="card-link btn-warning">Edit teman</a>
+    <a href="#" class="card-link btn-danger">Delete teman</a>
   </div>
 </div>
     
 
 @endforeach
+<div>
     {{ $friends->links() }}
+</div>
 
 @endsection
 
