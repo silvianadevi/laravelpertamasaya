@@ -27,3 +27,4 @@ Route::get('/coba/{no}', [CobaController::class, 'coba']);
 Route::get('/test', [CobaController::class, 'index']); 
 Route::get('/test/{ke}', [CobaController::class, 'urutan']);
 
+Route::get('/friends', [CobaController::class, 'friends']);

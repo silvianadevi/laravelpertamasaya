@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Friends;
+
 
 class CobaController extends Controller
 {
@@ -12,13 +14,9 @@ class CobaController extends Controller
     }
     public function urutan ($ke)
     {
-        $numbers = [
-            ['ke' => $ke, 'nomor' => 20],
-            ['ke' => $ke, 'nomor' => 30],
-            ['ke' => $ke, 'nomor' => 40],
-        ];
+        $friends = Friends :: paginate(3);
 
-        return view('urutan', compact('numbers'));
+        return view('friend', compact('friends'));
 
        
     }
@@ -26,4 +24,13 @@ class CobaController extends Controller
     {
         return view ('coba', ['ke' => $ke]) ;
     }
+
+    public function friends ()
+    {
+        $friends = Friends ::paginate(3);
+
+        return view('friend', compact('friends'));
+    }
+
 }
+
