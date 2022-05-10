@@ -4,6 +4,7 @@
 
 @section('content')
 
+<a href="/friends/create" class="card-link btn-primary">Tambah teman</a>
 @foreach ($friends as $friend)
 
 <div class="card" style="width: 18rem;">
