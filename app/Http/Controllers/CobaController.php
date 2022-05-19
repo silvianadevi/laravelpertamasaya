@@ -27,7 +27,7 @@ class CobaController extends Controller
 
     public function index ()
     {
-        $friends = Friends::orderBy('id', 'desc')->paginate(3);
+        $friends = Friends::orderBy('id', 'desc')->paginate(4);
         return view ('friends.index', compact('friends'));
     }
 
@@ -58,6 +58,7 @@ class CobaController extends Controller
 
     public function show($id)
     {
+
         $friends = friends::where('id', $id)->first();
         return view('friends.show', ['friend'=> $friends]);
     }

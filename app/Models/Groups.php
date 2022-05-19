@@ -12,9 +12,11 @@ class Groups extends Model
     protected $guarded = ['name'];
 
     public function friends()
-    {
-        return $this->hasMany('App\Models\Friends');
-    }
-
-
+{
+	return $this->hasMany('App\Models\Friends');
+}
+public function member_groups()
+{
+	return $this->hasMany('App\Models\Member_groups');
+}
 }
